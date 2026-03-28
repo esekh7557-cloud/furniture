@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Story | Digital Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "tertiary-fixed-dim":"#bfcbb0","background":"#f9f9f9","outline":"#767588","on-surface-variant":"#464556","on-primary":"#ffffff","on-tertiary-fixed-variant":"#404a36","on-tertiary":"#ffffff","primary":"#3126e5","surface-variant":"#e2e2e2","inverse-on-surface":"#f1f1f1","surface-tint":"#443ef4","on-primary-fixed-variant":"#2715de","error":"#ba1a1a","inverse-surface":"#303030","tertiary":"#47523d","on-tertiary-fixed":"#151e0e","on-error-container":"#93000a","on-error":"#ffffff","primary-fixed":"#e2dfff","on-surface":"#1b1b1b","surface-container":"#eeeeee","surface":"#f9f9f9","on-secondary":"#ffffff","on-primary-container":"#e5e3ff","on-primary-fixed":"#0a006b","error-container":"#ffdad6","surface-container-high":"#e8e8e8","on-secondary-container":"#556a12","on-secondary-fixed":"#161f00","tertiary-container":"#5f6a54","primary-fixed-dim":"#c1c1ff","on-background":"#1b1b1b","on-secondary-fixed-variant":"#3b4d00","surface-dim":"#dadada","surface-container-highest":"#e2e2e2","secondary-fixed":"#d3ed87","secondary":"#51660d","secondary-fixed-dim":"#b7d16f","outline-variant":"#c6c4d9","tertiary-fixed":"#dbe7cb","surface-container-low":"#f3f3f3","primary-container":"#4d49fc","inverse-primary":"#c1c1ff","surface-bright":"#f9f9f9","on-tertiary-container":"#deeace","secondary-container":"#d0ea85","surface-container-lowest":"#ffffff"
+      },
+      fontFamily: { "headline":["Manrope"], "body":["Inter"], "label":["Inter"] },
+      borderRadius: {"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},
+    },
+  },
+}
+</script>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+
+<div class="mobile-overlay fixed inset-0 z-[998] bg-black/40 backdrop-blur-sm" id="mobileOverlay" onclick="toggleMenu()"></div>
+<div class="mobile-menu fixed top-0 right-0 h-full w-72 z-[999] bg-white shadow-2xl flex flex-col" id="mobileMenu">
+    <div class="flex justify-between items-center px-6 py-7"><span class="font-headline font-bold text-lg tracking-tight">Menu</span><button onclick="toggleMenu()" class="material-symbols-outlined text-on-surface">close</button></div>
+    <nav class="flex flex-col gap-1 px-6 flex-1">
+        <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="index.html">Home</a>
+        <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="collections.html">Collections</a>
+        <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="product.html">Shop</a>
+        <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-primary" href="our-story.html">Our Story</a>
+    </nav>
+    <div class="px-6 py-8 border-t border-outline-variant/10"><p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">© 2024 Digital Atelier</p></div>
+</div>
+
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-2xl border-b border-black/[0.04]">
+<div class="flex justify-between items-center px-5 md:px-12 py-5 md:py-6 max-w-[1920px] mx-auto">
+<a href="index.html" class="font-headline font-bold text-xl md:text-2xl tracking-tighter text-on-surface">Digital Atelier</a>
+<div class="hidden md:flex items-center gap-10 font-headline text-[13px] tracking-tight font-medium">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="collections.html">Collections</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="product.html">Shop</a>
+<a class="text-primary border-b-2 border-primary pb-0.5" href="our-story.html">Our Story</a>
+</div>
+<div class="flex items-center gap-4 md:gap-6">
+<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors text-[22px]">search</button>
+<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors text-[22px]">shopping_bag</button>
+<button class="md:hidden material-symbols-outlined text-on-surface text-[22px]" onclick="toggleMenu()">menu</button>
+</div>
+</div>
+</nav>
+
+<main class="pt-28 md:pt-32">
+<!-- Hero -->
+<section class="px-5 md:px-12 mb-12 md:mb-24 lg:mb-48 reveal">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-end">
+<div class="lg:col-span-7">
+<span class="font-label text-[10px] md:text-xs text-primary tracking-[0.2em] uppercase mb-4 md:mb-6 block">Our Philosophy</span>
+<h1 class="font-headline text-[1.75rem] sm:text-[2.25rem] md:text-[3rem] lg:text-[3.5rem] leading-[1.1] font-extrabold tracking-tighter text-on-surface editorial-text-balance lg:max-w-3xl">
+A dialogue between raw matter and digital precision.
+</h1>
+</div>
+<div class="lg:col-span-5 pb-2 md:pb-4">
+<p class="font-body text-sm md:text-lg text-on-surface-variant leading-relaxed max-w-md">
+Digital Atelier represents the intersection of time-honored craftsmanship and the visionary possibilities of computational design.
+</p>
+</div>
+</div>
+</section>
+
+<!-- Image Grid -->
+<section class="px-5 md:px-12 mb-16 md:mb-32 reveal">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 lg:gap-12">
+<div class="md:col-span-8 group overflow-hidden">
+<img class="w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKg_RetTdpJOKKEQnks_o30NjehCQiOMXGDlWsju9ebDcOK8xw5VXjB3903t8nOIIv6dF2aGbfqZ5oX14JnNszC6JP2FuImYbFePRZa6AeVP672Qwj-st32-IlFp8P0tq2zB7_FYHakpPhdi3Jiv46cOR-pXKr0O-gx4mHelZXFGoo7udb1OHo7IYLICg8Mc-2C3MFdBI2MaO7nyuB8f-XGDOQgfaml2OT-uKnk-40PAM5pUNUBfJEwKiURmUsbX1xbheVSZ_uSfE"/>
+</div>
+<div class="md:col-span-4 flex flex-col justify-center">
+<div class="p-6 md:p-8 lg:p-12 bg-surface-container-low rounded-xl">
+<h3 class="font-headline text-xl md:text-2xl font-bold mb-4 md:mb-6">The Human Touch</h3>
+<p class="font-body text-sm md:text-base text-on-surface-variant leading-relaxed">
+Every piece begins in our physical atelier, where master woodworkers and leather artisans test the limits of natural materials.
+</p>
+</div>
+</div>
+<div class="md:col-span-4 group overflow-hidden md:mt-[-80px] lg:mt-[-120px]">
+<img class="w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-xl hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD4bDSkVYO9qK4uA_1c-qt7ejKrUZjb5KNDQLIFFPyKc__NREv1PwA-skE2d4CqcBJvBrhddVa_7Yv-Q9WskkRkYBPthSuVNfHOXewJGkV4_Pg2Cbl4zEyLVqt6lPQWQbkYpg2ktDUmk370MQiRb-LCdWkvVOLFZ3mzR-95ccQWnWRXiikKCsN7sNGbzXX0Wtu-IKfClF2eK4fiTA5XHL3slI9de3H4Pugbor-U5M25XHiLVUTP_qSkXdEZftmAMGtQt85ECKGrM0"/>
+</div>
+<div class="md:col-span-8 group overflow-hidden">
+<img class="w-full h-[200px] sm:h-[280px] md:h-[350px] lg:h-[400px] object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJvEVBmPZ1k8T08WoWJtkca8OwW6gWVDrqSFCDmjrf8RVoSCYFnuy1xaaG_WV7oU8_41yAnelMdk28JSC3jxyvXgIa65MK0XQ8Im0Ipc1h92L1ZrhhzcsCrtaqEbovcQw18Sf_GWti6cvs2AZeHBi0MQWJFBiBYv91iqmg4Sif0gdpGfSuVxFUhy3EhuIVJtY35fnIjEVRzjT_QDZuz6GXlBFhFm39ZMX2fEkwy3qIm-FogG0eGR9nN3Y2XsIdEC23_FRZ11PV3E4"/>
+</div>
+</div>
+</section>
+
+<!-- Sustainability -->
+<section class="bg-surface-container-low py-16 md:py-24 lg:py-48 mb-16 md:mb-32">
+<div class="px-5 md:px-12 max-w-[1920px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
+<div class="reveal">
+<h2 class="font-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter mb-8 md:mb-12">Built for the next century, not the next season.</h2>
+<div class="space-y-6 md:space-y-8">
+<div class="flex gap-4 md:gap-6">
+<span class="material-symbols-outlined text-secondary text-2xl md:text-3xl shrink-0">forest</span>
+<div>
+<h4 class="font-headline text-lg md:text-xl font-bold mb-1 md:mb-2">Conscious Sourcing</h4>
+<p class="font-body text-sm md:text-base text-on-surface-variant">We partner exclusively with FSC-certified timber mills and tanneries that utilize closed-loop water systems.</p>
+</div>
+</div>
+<div class="flex gap-4 md:gap-6">
+<span class="material-symbols-outlined text-secondary text-2xl md:text-3xl shrink-0">cycle</span>
+<div>
+<h4 class="font-headline text-lg md:text-xl font-bold mb-1 md:mb-2">Circular Craft</h4>
+<p class="font-body text-sm md:text-base text-on-surface-variant">Our pieces are engineered so that individual components can be repaired, replaced, or recycled over decades.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative reveal" style="transition-delay:0.15s">
+<img class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] object-cover rounded-xl shadow-2xl shadow-black/5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPzCWK_FqDeCh1JwEDiGalIpSfUaw2ajrgq5Vt-hreB2_MrI_4T9HFy7qafPclgQLypcA9HwC4YP7UBzLvHiRjYMQ72dfk19OiOawnFE1Cmp77jJRAdO7mM6-OWSglHcgXPv1yt5ouBoFt4BF8NuilZmvZHmXOo9ohczlQzIFXqjbiwxaCjQ8ZiGTw2Hb1JMPcKoeZ59PNwlnObaQoSCwhOSA2hcp9Sjh5U7BOkfXc_6t33Eqs4N8GzZIj-8sAMJrUBA7fjEtGA7o"/>
+<!-- CTA card: in-flow on mobile, absolute on md+ -->
+<div class="mt-4 md:mt-0 md:absolute md:-bottom-8 md:-left-8 bg-primary text-on-primary p-6 md:p-10 rounded-xl md:max-w-xs">
+<p class="font-label text-[10px] md:text-sm uppercase tracking-widest mb-2 md:mb-4 opacity-80">The Promise</p>
+<p class="font-headline text-base md:text-xl font-bold leading-tight">100% Carbon Neutral Production by 2026.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Materials -->
+<section class="px-5 md:px-12 mb-24 md:mb-48 reveal">
+<div class="max-w-[1920px] mx-auto text-center mb-12 md:mb-24">
+<h2 class="font-headline text-2xl md:text-4xl font-extrabold tracking-tight mb-3 md:mb-4">The Atelier Palette</h2>
+<p class="font-body text-sm md:text-base text-on-surface-variant max-w-2xl mx-auto">Selected for their durability, sensory depth, and ability to age with grace.</p>
+</div>
+<div class="max-w-[1920px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden rounded-xl mb-3 md:mb-6 bg-surface-container">
+<img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfNuzb0kLOjDJuGEKHGfmqP_zYAAnzRry2-Wg7yv5bTVdRdBLy5zMiEpMOMs1qPpgnuVXlk2zjDoTgiwiXEPeelyZ-Kot3yu8mj-4HWTF0H802PieT4nnp4EyRPNRdO5ih_dROjzrv41uPsdeIsx1VKeRoXFLxQbR-3KbeJodUxUIKOdfIdPZxjfBR_lx5vhzS7IUOFXxTufwc-nIZmPQH0d5eSBnGe3KNW7Op1PhPcLyeFVAxtruKfIhnnBO563LDzvbwDdOb1Ro"/>
+</div>
+<h4 class="font-headline text-sm md:text-lg font-bold mb-0.5">Carrara Statuario</h4>
+<p class="font-label text-[9px] md:text-xs text-on-surface-variant tracking-widest uppercase">Stone</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden rounded-xl mb-3 md:mb-6 bg-surface-container">
+<img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCaCZy0t_tQX3r_uIuYHHieb-Yrfjz7UQRlSXF9YgBRQJ7VmqrxXOzRzJcloOrRpT0dpSj_RuLmwNRIN4XbUTm1br_szO1vgdFWxUcVD6UdpZv7CTiHAIOoQL-utURqW5R5J94S4mihORCIj6LQW6Tc2iuQ4LjQ--sZewL-5P6mdbn2XVZm90zwj5E8ko1nDpNBUXYF0I5_CYuxRlvGfzM5T3g-qsSjwFOgoXl3Xu5843wOX9DiTPa1JelhMzJOgszK1DjI3Ub4Nk"/>
+</div>
+<h4 class="font-headline text-sm md:text-lg font-bold mb-0.5">Raw Belgian Linen</h4>
+<p class="font-label text-[9px] md:text-xs text-on-surface-variant tracking-widest uppercase">Textiles</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden rounded-xl mb-3 md:mb-6 bg-surface-container">
+<img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXZZ4fZ8gjMwLif_TsLCCia7318FTbdsu4pQ-Q-b0_eb86PX4fpSkUgEXXcT2ie31BHOdZHfXWjbI5PPyeIfTbBiVlrjv4pR3jolH7WmR0Q0JkPTZRxUaIhVKlCi4OSlIFalfd56lkxoN5MzEihW4B8nZjrG3Ff3MNagQSG-LGf3-NHsCpPfN4Ehrnv0JiXcXP6ypqD82EfmaDDbXIDAdU0ppweLQWUiwvm2zj3ohCNRVb45PZ1lkc59P-4Ofhmh3UKuqfMFg_QsQ"/>
+</div>
+<h4 class="font-headline text-sm md:text-lg font-bold mb-0.5">Architectural Brass</h4>
+<p class="font-label text-[9px] md:text-xs text-on-surface-variant tracking-widest uppercase">Metal</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden rounded-xl mb-3 md:mb-6 bg-surface-container">
+<img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXBtf1CnpJJl6Q-oAqkjtbtOSrNm7JKUmaeTeyZyzJy5CH136p4iOpTBLLX4PTtAWQ5Lw5I2g_iMISXd1kbyz5qYie6ZLFGas5_v019tJNmNmPl_5fu1NQEQCooGW4DYWNw5poGDqV5trooy-UC8W16ou-eMJ6heKbDCQEWK9MNk-Bfh5slxCI-b3WfpSIzSPW1tgB1BYcZa3dj30aDGLr2NnpubptlsDIn-l4yBC-MC_mvB1Y9OSMHHqxadTgqJnqzs56J1wUVEA"/>
+</div>
+<h4 class="font-headline text-sm md:text-lg font-bold mb-0.5">Smoked American Walnut</h4>
+<p class="font-label text-[9px] md:text-xs text-on-surface-variant tracking-widest uppercase">Timber</p>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="px-5 md:px-12 mb-16 md:mb-32 reveal">
+<div class="max-w-[1920px] mx-auto bg-primary py-12 md:py-24 rounded-xl text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="grid grid-cols-6 md:grid-cols-12 h-full">
+<div class="border-r border-on-primary h-full"></div><div class="border-r border-on-primary h-full"></div><div class="border-r border-on-primary h-full"></div><div class="border-r border-on-primary h-full"></div><div class="border-r border-on-primary h-full"></div><div class="border-r border-on-primary h-full"></div>
+<div class="hidden md:block border-r border-on-primary h-full"></div><div class="hidden md:block border-r border-on-primary h-full"></div><div class="hidden md:block border-r border-on-primary h-full"></div><div class="hidden md:block border-r border-on-primary h-full"></div><div class="hidden md:block border-r border-on-primary h-full"></div><div class="hidden md:block border-r border-on-primary h-full"></div>
+</div>
+</div>
+<div class="relative z-10 px-5 md:px-6">
+<h2 class="font-headline text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-on-primary tracking-tighter mb-6 md:mb-8">Ready to transform your space?</h2>
+<div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+<a class="inline-flex items-center justify-center px-6 md:px-10 py-3.5 md:py-5 bg-on-primary text-primary font-headline font-bold text-sm md:text-base rounded-lg hover:scale-105 transition-transform duration-300" href="collections.html">
+Explore Collections
+</a>
+<a class="inline-flex items-center justify-center px-6 md:px-10 py-3.5 md:py-5 border border-on-primary/30 text-on-primary font-headline font-bold text-sm md:text-base rounded-lg hover:bg-on-primary/10 transition-colors duration-300" href="#">
+Consultation
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="bg-zinc-50 w-full">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 px-5 md:px-12 py-16 md:py-24 max-w-[1920px] mx-auto">
+<div class="col-span-2 md:col-span-1">
+<div class="font-headline font-bold text-base md:text-lg text-on-surface mb-4 md:mb-6">Digital Atelier</div>
+<p class="font-body text-[10px] md:text-xs text-on-surface-variant leading-relaxed max-w-[200px]">Curating architectural living spaces through sustainable craftsmanship.</p>
+</div>
+<div>
+<h5 class="font-headline text-sm font-bold text-on-surface mb-4 md:mb-8">Brand</h5>
+<ul class="space-y-3 md:space-y-4">
+<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Journal</a></li>
+<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline text-sm font-bold text-on-surface mb-4 md:mb-8">Support</h5>
+<ul class="space-y-3 md:space-y-4">
+<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping</a></li>
+<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Returns</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline text-sm font-bold text-on-surface mb-4 md:mb-8">Legal</h5>
+<ul class="space-y-3 md:space-y-4">
+<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a></li>
+</ul>
+</div>
+</div>
+<div class="px-5 md:px-12 py-8 md:py-12 max-w-[1920px] mx-auto border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label text-[9px] md:text-xs uppercase tracking-widest text-on-surface-variant">© 2024 Digital Atelier. Crafted for the Modern Interior.</p>
+<div class="flex gap-6 font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Pinterest</a>
+</div>
+</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
