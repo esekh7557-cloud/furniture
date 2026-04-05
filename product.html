@@ -25,55 +25,50 @@ tailwind.config = {
 </head>
 <body class="bg-background text-on-surface font-body antialiased overflow-x-hidden">
 
-<!-- Mobile Overlay -->
 <div class="mobile-overlay fixed inset-0 z-[998] bg-black/40 backdrop-blur-sm" id="mobileOverlay" onclick="toggleMenu()"></div>
-<!-- Mobile Menu -->
 <div class="mobile-menu fixed top-0 right-0 h-full w-72 z-[999] bg-white shadow-2xl flex flex-col" id="mobileMenu">
     <div class="flex justify-between items-center px-6 py-7">
         <span class="font-headline font-bold text-lg tracking-tight">Menu</span>
-        <button onclick="toggleMenu()" class="material-symbols-outlined text-on-surface">close</button>
+        <button class="material-symbols-outlined text-on-surface" onclick="toggleMenu()">close</button>
     </div>
     <nav class="flex flex-col gap-1 px-6 flex-1">
         <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="index.html">Home</a>
-        <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="collections.html">Collections</a>
-        <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="product.html">Shop</a>
+        <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="collections.html#catalog">Collections</a>
+        <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-primary" href="product.html#purchase-panel">Shop</a>
         <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="our-story.html">Our Story</a>
     </nav>
     <div class="px-6 py-8 border-t border-outline-variant/10">
-        <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">© 2024 Digital Atelier</p>
+        <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">&copy; 2024 Digital Atelier</p>
     </div>
 </div>
 
-<!-- Nav -->
 <nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-2xl border-b border-black/[0.04]">
-<div class="flex justify-between items-center px-5 md:px-12 py-5 md:py-6 max-w-[1920px] mx-auto">
-<a href="index.html" class="font-headline font-bold text-xl md:text-2xl tracking-tighter text-on-surface">Digital Atelier</a>
-<div class="hidden md:flex items-center space-x-10 font-headline text-[13px] tracking-tight font-medium">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="collections.html">Collections</a>
-<a class="text-primary border-b-2 border-primary pb-0.5" href="product.html">Shop</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="our-story.html">Our Story</a>
+<div class="site-nav-shell flex justify-between items-center px-5 md:px-12 max-w-[1920px] mx-auto">
+<a class="site-nav-brand font-headline font-bold text-on-surface" href="index.html">Digital Atelier</a>
+<div class="site-nav-links hidden md:flex items-center font-headline font-medium">
+<a class="site-nav-link" href="index.html">Home</a>
+<a class="site-nav-link" href="collections.html#catalog">Collections</a>
+<a class="site-nav-link site-nav-link-active" href="product.html#purchase-panel">Shop</a>
+<a class="site-nav-link" href="our-story.html">Our Story</a>
 </div>
 <div class="flex items-center gap-4 md:gap-6">
-<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors text-[22px]">search</button>
-<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors text-[22px]">shopping_bag</button>
+<a aria-label="Browse the collection" class="site-nav-action material-symbols-outlined text-on-surface text-[22px]" href="collections.html#catalog">search</a>
+<a aria-label="View featured product" class="site-nav-action material-symbols-outlined text-on-surface text-[22px]" href="product.html#purchase-panel">shopping_bag</a>
 <button class="md:hidden material-symbols-outlined text-on-surface text-[22px]" onclick="toggleMenu()">menu</button>
 </div>
 </div>
 </nav>
 
 <main class="pt-28 md:pt-32 pb-16 md:pb-24 px-5 md:px-12 max-w-[1920px] mx-auto">
-<!-- Breadcrumbs -->
 <nav class="mb-8 md:mb-12 flex items-center space-x-2 text-[9px] md:text-[10px] uppercase tracking-widest text-on-surface-variant font-semibold reveal">
 <a class="hover:text-primary transition-colors" href="index.html">Home</a>
 <span class="opacity-30">/</span>
-<a class="hover:text-primary transition-colors" href="collections.html">Seating</a>
+<a class="hover:text-primary transition-colors" href="collections.html#catalog">Seating</a>
 <span class="opacity-30">/</span>
 <span class="text-on-surface">Solis Lounge Chair</span>
 </nav>
 
-<!-- Product Hero Section -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 lg:gap-24 mb-16 md:mb-32">
-<!-- Gallery -->
 <div class="lg:col-span-7 flex flex-col gap-3 md:gap-6 reveal">
 <div class="relative aspect-[4/5] overflow-hidden rounded-xl md:rounded-2xl bg-surface-container-low group">
 <img alt="Solis Lounge Chair" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_E9zQHWtHp27lfAmooeSZ7Q9VjUVf7uZc9ji5MT5ImJtCL_z8H0B9Pnpzo6HbDCiwru5xWStQJ4m0kJr2ObSvh5EAunIgPEJZEhMOjwBDkV99bFs1OePRjo3RFcYsxOv1fuOx8OjoOqYR6-KKwZKyHh3SONb3UT-NbVc2SgdHuEvi0lUw166vNdKpYw-ho1BCGJwPDGnWvxvakPD-cTRyEyJheAK4b0Xd2mV4w3cUhlu56w2p4oIFeZI0D6bf61M5PItYzSGW9Q0"/>
@@ -88,8 +83,7 @@ tailwind.config = {
 </div>
 </div>
 
-<!-- Product Info -->
-<div class="lg:col-span-5 lg:sticky lg:top-32 h-fit flex flex-col space-y-6 md:space-y-10 reveal" style="transition-delay:0.12s">
+<div class="lg:col-span-5 lg:sticky lg:top-32 h-fit flex flex-col space-y-6 md:space-y-10 reveal" id="purchase-panel" style="transition-delay:0.12s">
 <header>
 <div class="font-label text-[10px] md:text-xs font-semibold tracking-widest text-secondary mb-3 md:mb-4 uppercase">Artesian Series 01</div>
 <h1 class="font-headline text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter text-on-surface mb-1 md:mb-2">Solis Lounge Chair</h1>
@@ -111,37 +105,36 @@ Defined by its architectural silhouette and honest materiality, the Solis Lounge
 </span>
 </div>
 </div>
-<!-- Selectors -->
+
 <div class="space-y-6 md:space-y-8">
-<div>
+<div data-option-group="finish" data-option-style="swatch">
 <label class="font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant block mb-3 md:mb-4">Wood Finish</label>
 <div class="flex gap-3">
-<button class="w-9 h-9 md:w-10 md:h-10 rounded-full border-2 border-primary p-0.5 transition-transform hover:scale-110 active:scale-95"><div class="w-full h-full rounded-full bg-[#5d4037]"></div></button>
-<button class="w-9 h-9 md:w-10 md:h-10 rounded-full border-2 border-transparent p-0.5 transition-transform hover:scale-110 active:scale-95"><div class="w-full h-full rounded-full bg-[#212121]"></div></button>
-<button class="w-9 h-9 md:w-10 md:h-10 rounded-full border-2 border-transparent p-0.5 transition-transform hover:scale-110 active:scale-95"><div class="w-full h-full rounded-full bg-[#d7ccc8]"></div></button>
+<button class="w-9 h-9 md:w-10 md:h-10 rounded-full border-2 border-primary p-0.5 transition-transform hover:scale-110 active:scale-95" data-option-button type="button"><div class="w-full h-full rounded-full bg-[#5d4037]"></div></button>
+<button class="w-9 h-9 md:w-10 md:h-10 rounded-full border-2 border-transparent p-0.5 transition-transform hover:scale-110 active:scale-95" data-option-button type="button"><div class="w-full h-full rounded-full bg-[#212121]"></div></button>
+<button class="w-9 h-9 md:w-10 md:h-10 rounded-full border-2 border-transparent p-0.5 transition-transform hover:scale-110 active:scale-95" data-option-button type="button"><div class="w-full h-full rounded-full bg-[#d7ccc8]"></div></button>
 </div>
 </div>
-<div>
+<div data-option-group="fabric" data-option-style="button">
 <label class="font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant block mb-3 md:mb-4">Fabrication</label>
 <div class="grid grid-cols-2 gap-2 md:gap-3">
-<button class="px-3 md:px-4 py-3 border border-on-surface text-on-surface font-label text-[10px] md:text-xs uppercase tracking-widest bg-white rounded-lg">Ivory Bouclé</button>
-<button class="px-3 md:px-4 py-3 border border-outline-variant text-on-surface-variant font-label text-[10px] md:text-xs uppercase tracking-widest hover:border-on-surface transition-colors rounded-lg">Obsidian Wool</button>
+<button class="px-3 md:px-4 py-3 border border-on-surface text-on-surface font-label text-[10px] md:text-xs uppercase tracking-widest bg-white rounded-lg" data-option-button type="button">Ivory Boucle</button>
+<button class="px-3 md:px-4 py-3 border border-outline-variant text-on-surface-variant font-label text-[10px] md:text-xs uppercase tracking-widest hover:border-on-surface transition-colors rounded-lg" data-option-button type="button">Obsidian Wool</button>
 </div>
 </div>
 </div>
-<!-- CTA -->
+
 <div class="flex flex-col space-y-3 md:space-y-4 pt-2 md:pt-4">
-<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 md:py-5 rounded-lg font-label text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-[0.97] duration-200">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 md:py-5 rounded-lg font-label text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-[0.97] duration-200" data-mailto-body="Hello Digital Atelier, I would like to reserve the Solis Lounge Chair." data-mailto-subject="Reserve the Solis Lounge Chair" type="button">
 Add to Bag
 </button>
-<button class="w-full bg-white border border-outline-variant py-4 md:py-5 rounded-lg font-label text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] hover:bg-surface-container-low transition-colors duration-200">
+<button class="w-full bg-white border border-outline-variant py-4 md:py-5 rounded-lg font-label text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] hover:bg-surface-container-low transition-colors duration-200" data-mailto-body="Hello Digital Atelier, please send me a swatch for the Solis Lounge Chair." data-mailto-subject="Request a swatch for the Solis Lounge Chair" type="button">
 Request a Swatch
 </button>
 </div>
 </div>
 </div>
 
-<!-- Technical Specs -->
 <section class="mb-16 md:mb-32 reveal">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-start">
 <div class="space-y-8 md:space-y-12">
@@ -179,11 +172,10 @@ Request a Swatch
 </div>
 </section>
 
-<!-- Cross-sell -->
 <section class="py-12 md:py-24 border-t border-outline-variant/10 reveal">
 <h2 class="font-headline text-xl md:text-3xl font-bold tracking-tight mb-8 md:mb-16">You May Also Like</h2>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-12">
-<div class="group cursor-pointer" onclick="window.location.href='product.html'">
+<div class="group cursor-pointer" onclick="window.location.href='product.html#purchase-panel'">
 <div class="aspect-[3/4] overflow-hidden rounded-xl mb-4 md:mb-6 bg-surface-container-low">
 <img alt="Lunar Side Table" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP_JrTf6HK3_qSmA0nx5hibS_HJVlpKoepQuR6U7X824-MG-uueK7H_Ib5x8mwVHbSlUYSr9u6mu_jAQFeeVU9lpkUTIl4e972arrO0OwaDI4dFjMtHkC9W9p8WHXFOFZSuu3YEqdZd608b6qO6To5mkeMnicfN1pYKwOwVP0t2CK4amtwPkSSffIvGVkF3Jz11PG1JQGQPOu3nGordp6R45qvoXxSFb0QmEkrbLPGEVnab3cZavUSEjpoD7CmZF8DC7LxTWT5Qfw"/>
 </div>
@@ -191,7 +183,7 @@ Request a Swatch
 <h4 class="font-headline text-sm md:text-lg font-bold text-on-surface group-hover:text-primary transition-colors mb-0.5">Lunar Side Table</h4>
 <p class="font-body text-xs md:text-sm text-on-surface-variant">$850.00</p>
 </div>
-<div class="group cursor-pointer">
+<div class="group cursor-pointer" onclick="window.location.href='product.html#purchase-panel'">
 <div class="aspect-[3/4] overflow-hidden rounded-xl mb-4 md:mb-6 bg-surface-container-low">
 <img alt="Earthen Rug" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiNBYkdzs4856gGm8dGFtFYC_9NxKANidkPt6Y-aJJSVZd8QbL2PRxyGe2xbVxGBjWdkmO-ndy-hjXhqv_nbODFXtv5vdI8rbEcgQOAIL3zmHSB8Zfa1z0NQLCmtSxUqz1jrPdCD5yzSsNY23vqyC_CrYRTVw0YDYftHVwMSUntK_MAcIpSH0V4QzZ38WmbDdjixxtWaPdKEzJUE6XfCfMQt_cq4-HPYKUoVZEbsclr1ZZFppUwY_YZAh8mCES-RyOP51FGQf4Vpk"/>
 </div>
@@ -199,7 +191,7 @@ Request a Swatch
 <h4 class="font-headline text-sm md:text-lg font-bold text-on-surface group-hover:text-primary transition-colors mb-0.5">Earthen Area Rug</h4>
 <p class="font-body text-xs md:text-sm text-on-surface-variant">$1,200.00</p>
 </div>
-<div class="group cursor-pointer hidden md:block">
+<div class="group cursor-pointer hidden md:block" onclick="window.location.href='product.html#purchase-panel'">
 <div class="aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container-low">
 <img alt="Statis Floor Lamp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEz_oGBATj5-i1Ne6QrTH1z69t0NrrLMUgSSiSrw3LM1CNsUQ9p3LOyQm64zUG0XIDYD6BcDwefhG_g-7nkfcUDbk8NkMcVdDlN36Vdva6roQrc0DFm8PDxFxy7x4poSS0hzfGyWrRn30sX6kqJ65Mxk_PF6N4O3p8MQg3RoS5pJtiwd2-heT50CIRdfOilNw-vKFM5Sm8zZuAwoTTa5dLbQqDNwjYu0j3jUtm8mUgrKGx3dJhsfn4NLUiNf_BoVIL8L-6YNufb_E"/>
 </div>
@@ -211,7 +203,6 @@ Request a Swatch
 </section>
 </main>
 
-<!-- Footer -->
 <footer class="bg-zinc-50 w-full">
 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 px-5 md:px-12 py-16 md:py-24 max-w-[1920px] mx-auto">
 <div class="col-span-2 md:col-span-1 space-y-4">
@@ -220,18 +211,18 @@ Request a Swatch
 </div>
 <div class="flex flex-col space-y-3">
 <h5 class="font-headline text-sm font-bold text-on-surface">Discover</h5>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Journal</a>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Sustainability</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="journal.html">Journal</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="journal.html#sustainability">Sustainability</a>
 </div>
 <div class="flex flex-col space-y-3">
 <h5 class="font-headline text-sm font-bold text-on-surface">Support</h5>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping</a>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Returns</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="client-services.html#shipping">Shipping</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="client-services.html#returns">Returns</a>
 </div>
 <div class="flex flex-col space-y-3">
 <h5 class="font-headline text-sm font-bold text-on-surface">Legal</h5>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a>
-<p class="font-body text-[9px] md:text-[10px] text-on-surface-variant pt-2">© 2024 Digital Atelier</p>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="client-services.html#privacy">Privacy</a>
+<p class="font-body text-[9px] md:text-[10px] text-on-surface-variant pt-2">&copy; 2024 Digital Atelier</p>
 </div>
 </div>
 </footer>

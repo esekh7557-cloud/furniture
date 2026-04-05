@@ -27,35 +27,35 @@ tailwind.config = {
 
 <div class="mobile-overlay fixed inset-0 z-[998] bg-black/40 backdrop-blur-sm" id="mobileOverlay" onclick="toggleMenu()"></div>
 <div class="mobile-menu fixed top-0 right-0 h-full w-72 z-[999] bg-white shadow-2xl flex flex-col" id="mobileMenu">
-    <div class="flex justify-between items-center px-6 py-7"><span class="font-headline font-bold text-lg tracking-tight">Menu</span><button onclick="toggleMenu()" class="material-symbols-outlined text-on-surface">close</button></div>
+    <div class="flex justify-between items-center px-6 py-7"><span class="font-headline font-bold text-lg tracking-tight">Menu</span><button class="material-symbols-outlined text-on-surface" onclick="toggleMenu()">close</button></div>
     <nav class="flex flex-col gap-1 px-6 flex-1">
         <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="index.html">Home</a>
-        <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="collections.html">Collections</a>
-        <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="product.html">Shop</a>
+        <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="collections.html#catalog">Collections</a>
+        <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-on-surface hover:text-primary transition-colors" href="product.html#purchase-panel">Shop</a>
         <a class="py-4 border-b border-outline-variant/10 font-headline text-lg font-medium text-primary" href="our-story.html">Our Story</a>
     </nav>
-    <div class="px-6 py-8 border-t border-outline-variant/10"><p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">© 2024 Digital Atelier</p></div>
+    <div class="px-6 py-8 border-t border-outline-variant/10"><p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">&copy; 2024 Digital Atelier</p></div>
 </div>
 
 <nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-2xl border-b border-black/[0.04]">
-<div class="flex justify-between items-center px-5 md:px-12 py-5 md:py-6 max-w-[1920px] mx-auto">
-<a href="index.html" class="font-headline font-bold text-xl md:text-2xl tracking-tighter text-on-surface">Digital Atelier</a>
-<div class="hidden md:flex items-center gap-10 font-headline text-[13px] tracking-tight font-medium">
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="collections.html">Collections</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="product.html">Shop</a>
-<a class="text-primary border-b-2 border-primary pb-0.5" href="our-story.html">Our Story</a>
+<div class="site-nav-shell flex justify-between items-center px-5 md:px-12 max-w-[1920px] mx-auto">
+<a class="site-nav-brand font-headline font-bold text-on-surface" href="index.html">Digital Atelier</a>
+<div class="site-nav-links hidden md:flex items-center font-headline font-medium">
+<a class="site-nav-link" href="index.html">Home</a>
+<a class="site-nav-link" href="collections.html#catalog">Collections</a>
+<a class="site-nav-link" href="product.html#purchase-panel">Shop</a>
+<a class="site-nav-link site-nav-link-active" href="our-story.html">Our Story</a>
 </div>
 <div class="flex items-center gap-4 md:gap-6">
-<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors text-[22px]">search</button>
-<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors text-[22px]">shopping_bag</button>
+<a aria-label="Browse the collection" class="site-nav-action material-symbols-outlined text-on-surface text-[22px]" href="collections.html#catalog">search</a>
+<a aria-label="View featured product" class="site-nav-action material-symbols-outlined text-on-surface text-[22px]" href="product.html#purchase-panel">shopping_bag</a>
 <button class="md:hidden material-symbols-outlined text-on-surface text-[22px]" onclick="toggleMenu()">menu</button>
 </div>
 </div>
 </nav>
 
 <main class="pt-28 md:pt-32">
-<!-- Hero -->
-<section class="px-5 md:px-12 mb-12 md:mb-24 lg:mb-48 reveal">
+<section class="px-5 md:px-12 mb-12 md:mb-24 lg:mb-48 reveal" id="story-intro">
 <div class="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-end">
 <div class="lg:col-span-7">
 <span class="font-label text-[10px] md:text-xs text-primary tracking-[0.2em] uppercase mb-4 md:mb-6 block">Our Philosophy</span>
@@ -71,7 +71,6 @@ Digital Atelier represents the intersection of time-honored craftsmanship and th
 </div>
 </section>
 
-<!-- Image Grid -->
 <section class="px-5 md:px-12 mb-16 md:mb-32 reveal">
 <div class="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 lg:gap-12">
 <div class="md:col-span-8 group overflow-hidden">
@@ -94,8 +93,7 @@ Every piece begins in our physical atelier, where master woodworkers and leather
 </div>
 </section>
 
-<!-- Sustainability -->
-<section class="bg-surface-container-low py-16 md:py-24 lg:py-48 mb-16 md:mb-32">
+<section class="bg-surface-container-low py-16 md:py-24 lg:py-48 mb-16 md:mb-32" id="sustainability">
 <div class="px-5 md:px-12 max-w-[1920px] mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
 <div class="reveal">
@@ -119,7 +117,6 @@ Every piece begins in our physical atelier, where master woodworkers and leather
 </div>
 <div class="relative reveal" style="transition-delay:0.15s">
 <img class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] object-cover rounded-xl shadow-2xl shadow-black/5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPzCWK_FqDeCh1JwEDiGalIpSfUaw2ajrgq5Vt-hreB2_MrI_4T9HFy7qafPclgQLypcA9HwC4YP7UBzLvHiRjYMQ72dfk19OiOawnFE1Cmp77jJRAdO7mM6-OWSglHcgXPv1yt5ouBoFt4BF8NuilZmvZHmXOo9ohczlQzIFXqjbiwxaCjQ8ZiGTw2Hb1JMPcKoeZ59PNwlnObaQoSCwhOSA2hcp9Sjh5U7BOkfXc_6t33Eqs4N8GzZIj-8sAMJrUBA7fjEtGA7o"/>
-<!-- CTA card: in-flow on mobile, absolute on md+ -->
 <div class="mt-4 md:mt-0 md:absolute md:-bottom-8 md:-left-8 bg-primary text-on-primary p-6 md:p-10 rounded-xl md:max-w-xs">
 <p class="font-label text-[10px] md:text-sm uppercase tracking-widest mb-2 md:mb-4 opacity-80">The Promise</p>
 <p class="font-headline text-base md:text-xl font-bold leading-tight">100% Carbon Neutral Production by 2026.</p>
@@ -129,8 +126,7 @@ Every piece begins in our physical atelier, where master woodworkers and leather
 </div>
 </section>
 
-<!-- Materials -->
-<section class="px-5 md:px-12 mb-24 md:mb-48 reveal">
+<section class="px-5 md:px-12 mb-24 md:mb-48 reveal" id="materials">
 <div class="max-w-[1920px] mx-auto text-center mb-12 md:mb-24">
 <h2 class="font-headline text-2xl md:text-4xl font-extrabold tracking-tight mb-3 md:mb-4">The Atelier Palette</h2>
 <p class="font-body text-sm md:text-base text-on-surface-variant max-w-2xl mx-auto">Selected for their durability, sensory depth, and ability to age with grace.</p>
@@ -167,7 +163,6 @@ Every piece begins in our physical atelier, where master woodworkers and leather
 </div>
 </section>
 
-<!-- CTA -->
 <section class="px-5 md:px-12 mb-16 md:mb-32 reveal">
 <div class="max-w-[1920px] mx-auto bg-primary py-12 md:py-24 rounded-xl text-center relative overflow-hidden">
 <div class="absolute inset-0 opacity-10 pointer-events-none">
@@ -179,10 +174,10 @@ Every piece begins in our physical atelier, where master woodworkers and leather
 <div class="relative z-10 px-5 md:px-6">
 <h2 class="font-headline text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-on-primary tracking-tighter mb-6 md:mb-8">Ready to transform your space?</h2>
 <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-<a class="inline-flex items-center justify-center px-6 md:px-10 py-3.5 md:py-5 bg-on-primary text-primary font-headline font-bold text-sm md:text-base rounded-lg hover:scale-105 transition-transform duration-300" href="collections.html">
+<a class="inline-flex items-center justify-center px-6 md:px-10 py-3.5 md:py-5 bg-on-primary text-primary font-headline font-bold text-sm md:text-base rounded-lg hover:scale-105 transition-transform duration-300" href="collections.html#catalog">
 Explore Collections
 </a>
-<a class="inline-flex items-center justify-center px-6 md:px-10 py-3.5 md:py-5 border border-on-primary/30 text-on-primary font-headline font-bold text-sm md:text-base rounded-lg hover:bg-on-primary/10 transition-colors duration-300" href="#">
+<a class="inline-flex items-center justify-center px-6 md:px-10 py-3.5 md:py-5 border border-on-primary/30 text-on-primary font-headline font-bold text-sm md:text-base rounded-lg hover:bg-on-primary/10 transition-colors duration-300" href="client-services.html#consultation">
 Consultation
 </a>
 </div>
@@ -200,29 +195,29 @@ Consultation
 <div>
 <h5 class="font-headline text-sm font-bold text-on-surface mb-4 md:mb-8">Brand</h5>
 <ul class="space-y-3 md:space-y-4">
-<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Journal</a></li>
-<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="journal.html">Journal</a></li>
+<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="journal.html#sustainability">Sustainability</a></li>
 </ul>
 </div>
 <div>
 <h5 class="font-headline text-sm font-bold text-on-surface mb-4 md:mb-8">Support</h5>
 <ul class="space-y-3 md:space-y-4">
-<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping</a></li>
-<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Returns</a></li>
+<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="client-services.html#shipping">Shipping</a></li>
+<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="client-services.html#returns">Returns</a></li>
 </ul>
 </div>
 <div>
 <h5 class="font-headline text-sm font-bold text-on-surface mb-4 md:mb-8">Legal</h5>
 <ul class="space-y-3 md:space-y-4">
-<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a></li>
+<li><a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="client-services.html#privacy">Privacy</a></li>
 </ul>
 </div>
 </div>
 <div class="px-5 md:px-12 py-8 md:py-12 max-w-[1920px] mx-auto border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="font-label text-[9px] md:text-xs uppercase tracking-widest text-on-surface-variant">© 2024 Digital Atelier. Crafted for the Modern Interior.</p>
+<p class="font-label text-[9px] md:text-xs uppercase tracking-widest text-on-surface-variant">&copy; 2024 Digital Atelier. Crafted for the Modern Interior.</p>
 <div class="flex gap-6 font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant">
-<a class="hover:text-primary transition-colors" href="#">Instagram</a>
-<a class="hover:text-primary transition-colors" href="#">Pinterest</a>
+<a class="hover:text-primary transition-colors" href="https://www.instagram.com/" rel="noreferrer" target="_blank">Instagram</a>
+<a class="hover:text-primary transition-colors" href="https://www.pinterest.com/" rel="noreferrer" target="_blank">Pinterest</a>
 </div>
 </div>
 </footer>
